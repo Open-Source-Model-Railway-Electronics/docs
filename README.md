@@ -1,0 +1,3 @@
+# docs
+
+Initial repository skeleton.
