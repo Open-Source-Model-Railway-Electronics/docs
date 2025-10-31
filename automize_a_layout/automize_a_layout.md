@@ -5,13 +5,9 @@
 ## Foreword
 
 Model railways have always been more than just trains running in circles. They are miniature worlds — complete systems of movement, signals, and logic. But to make that world behave realistically, we need automation.
-
 Automation means the trains know where they are, signals change automatically, and routes set themselves without a hand touching a switch. For many modellers, that sounds like magic — or something reserved for engineers. It isn’t.
-
 This guide explains, step by step, how digital model railway automation really works. It starts with the absolute basics — what an input, output, and block are — and builds up to full digital control with computers, boosters, and feedback.
-
 No deep electronics knowledge is needed; only curiosity and a bit of patience. Every chapter focuses on understanding, not memorizing. If you know why something is done, you’ll know how to fix it when it doesn’t work.
-
 That’s the goal: to give you the confidence to wire, test, and automate your own layout with a clear head instead of fear of failure. Automation is not about letting the computer play with your trains — it’s about building a layout that behaves like a real railway: organized, safe, and alive.
 
 ---
@@ -42,33 +38,29 @@ Outputs are the hands of your railway. They act in response to commands: turnout
 Logic is the brain between input and output. It decides what should happen next.  
 Three common forms of logic exist:
 1. **Manual control** – you decide.  
-2. **Central control** – the command station interprets DCC commands.  
-3. **Computer control** – software like Rocrail, iTrain, or TrainController decides automatically.
+2. **Computer control** – software like Rocrail, iTrain, Train Tastic or TrainController decides automatically.
 
 When your system is automated, the computer takes over the logic, and the command station becomes a communication bridge.
 
 ### Blocks and Sections
-A **block** is a part of track where only one train may be at a time. A **section** is a smaller part within a block, used for detection (entry, stop, or exit).
+A **block** is a part of track where only one train may be at a time. A **section** is a smaller part within a block, used for detection (entry, stop, or exit). There is more than one way to arrange a block but in essence a block contains 3 sections. Entry section, middle section and stop section. If the block can be driven in both directions the entry and exit sections can be swapped in. The general idea is that when a train enters the entry sections it starts to slow down. The train may stop in the middle section. If the train overshoots and hits the stop section it is stopped faster. To wire the middle section to an occupancy decoder is not really needed. It could help to detect loose wagons (that can be detected)
+
+
 
 ### Decoders
-Decoders translate digital commands into actions. They come in three main types:
-- Locomotive decoders  
-- Accessory decoders  
-- Feedback modules  
+Decoders translate digital commands into actions. They come in two main types:
+- Locomotive decoders (mobile decoders)
+- Accessory decoders  (stationary decoders)
 
-Each decoder has its own digital address.
+Each decoder has its own digital address. The command centers uses these addresses to control each decoder individually. 
 
 ### Command Station
-The command station (central unit) is the link between the computer and the track. It sends DCC signals to the rails and interprets feedback.
+The command station (central unit) is the link between the computer and the track. It sends DCC signals to all locomotive and accessory decoders and it relays feedback to a computer.
 
-### Summary
-Inputs detect events, logic decides, outputs act — decoders handle communication, and blocks organize traffic.
 
 ---
 
 ## Chapter 2 — Digital Control in a Nutshell
-
-Digital control replaces analog wiring. The track carries both power and commands.
 
 When a train enters a block:
 1. The detector senses occupancy.  
@@ -88,6 +80,8 @@ This feedback loop — **detect → decide → act** — keeps everything coordi
 | Computer | Makes decisions | Rocrail, iTrain |
 | DCC Signal | Carries data | Track wiring |
 | Decoder | Executes commands | Loc or accessory decoder |
+
+![](pic1.png)
 
 ---
 
@@ -133,7 +127,7 @@ Good wiring is the backbone of reliability.
 
 ### Guidelines
 - Use a **power bus** with feeders every 1–2 m.  
-- Prefer **star wiring** for simplicity.  
+- Prefer **star wiring** for a more robust system.  
 - Label both ends of every wire.  
 - Use ferrules, not tinned ends, in screw terminals.  
 - Separate track power, feedback, and lighting cables.  
@@ -150,9 +144,12 @@ When the layout grows, one command station cannot power everything. **Boosters**
 ### Booster Functions
 - Amplify the DCC signal for their district.  
 - Provide short-circuit protection per section.  
-- Maintain a shared common ground with the command station.
 
 Each power district has its own booster, supply, and fuses. Accessories should run on a separate, regulated power line.
+
+![](pic3.png)
+
+Boosters usually provide around 3.5A of current. An average train consumes around 500~700mA while driving. This ofcourse differs per train and things like the lighting in the coaches. One booster can supply enough current for around 4 trains.
 
 ---
 
