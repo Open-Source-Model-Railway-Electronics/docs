@@ -36,6 +36,27 @@ Some of the double coil drives, have mechanical limit switches. This allows one 
 ![Figure 2: Fleischmann N gauge point drive](plaatje_2.png)
 ![Figure 3: Märklin C-track point drive](plaatje_3.png)
 
+
+
+#### Wiring
+
+A double coil drive can be wired to both a digital decoder as well as a mechanical switch. Schematically a double coil drive looks like this:
+There are 2 coils and usually also limit switches.
+
+![](wiringCoils1.png) ![](wiringCoils2.png)
+
+In order to switch the points to either side, you need to energize of the two coils. We typically switch these types with a pulse. With limit switches involved you can also switch continously. But if it happens that the limit switch does not disconnect no more, the coil will burn out.
+
+
+
+The modelrailway companies often have dedicated switch units for points. The most well know are of Marklin and Fleischmann. You can also use a miniature toggle switch. They can be bought with a neutral middle position or without.
+
+![](MTS.png) ![](wiringCoils4.png)
+
+Wiring a double coil drive to these switches can be done as shown below
+
+![](wiringCoils5.png)
+
 ---
 
 ## Point Motor
@@ -91,10 +112,31 @@ Some motors (like the MTB MP1 or earlier designs) use three wires: one **common 
 
 The advantage of three-wire control is that it is compatible with most types of digital decoders, where two-wire control is not. You can also use a single pole double throw switch instead of a double pole variant. The disadvantage is that such a motor uses a little bit more electronics, and there is a third wire involved.
 
-![Figure 8: MTB MP1](plaatje_8.png)
-![Figure 9: Wiring of three-wire point motor](plaatje_9.png)
+Another advantage is that these motor can also be controlled with a miniature toggle switch. They can also be switched with a pulse if the pulse last long enough. These kind of motor typically need a second or two to fully switch.
+
+
+![](MP1_wiring.png)
 
 ---
+
+## Wiring to a decoder
+
+Both double coil drives as well as three-wire Point motors can usually be connected to a DCC decoder. In this example an OS-Solenoid Decoder is used. It would be needed for the MP1 to have different settings then for the double coil drive.
+
+![](wiring_decoder.png)
+
+
+## Wiring to a diode matrix
+
+One great benefit of both double coil drives as well as three-wire motors is that you can set entire routes with just 1 button. We can do so using the diode matrix method. In this example we have 3 double coil drives for 3 points and 4 tracks. With one press on one of the four switches we can set all 3 points in the correct position.
+
+![](matrix.png)
+
+You can use the [OS-Diode Matrix](https://github.com/Open-Source-Model-Railway-Electronics/Analog-Layout-Control) PCB to easily make a diode matrix
+
+
+![alt text](matrix2.png)
+
 
 ## Servo Motor Drive
 
