@@ -8,12 +8,13 @@ This document describes everything you need to know about points motors and frog
 
 Points, also known as turnouts or switches, are the track components that allow a train to move from one line to another.
 
-It is made up of several key parts:\
+It is made up of several key parts:
 - **Stock rails** – the two outer running rails of the turnout.
 - **Point blades (switch rails)** – the movable rails that guide the train’s wheels either straight or onto the diverging track. They move together as a pair.
 - **Frog** – the part where the two routes intersect.
 - **Closure rails** – short connecting rails between the point blades and the frog.
 - **Tie bar (or stretcher bar)** – connects the two point blades so they move together when the turnout motor or lever operates.
+- **Gard rails** - safety feature for when derailing takes place in real life. 
 
 ![Figure 1: labeled turnout diagram](plaatje_1.png)
 

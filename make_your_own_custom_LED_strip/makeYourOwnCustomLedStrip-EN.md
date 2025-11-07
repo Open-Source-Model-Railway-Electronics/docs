@@ -5,7 +5,7 @@ generator: LibreOffice 25.2.6.2 (Windows)
 lang: en-US
 ---
 
-# Design your own custom LED boards. {#ontwerp-je-eigen-custom-led-printen. .western}
+# Design your own custom LED Strips. {#ontwerp-je-eigen-custom-led-printen. .western}
 
 ------------------------------------------------------------------------
 
@@ -27,8 +27,7 @@ I also use SMD components that I’ll solder on myself. I do choose large SMD pa
 
 You might also want to make, for example, a board for head- or tail‑lights for a specific locomotive.
 
-\
-\
+
 
 Table of contents
 
@@ -164,8 +163,7 @@ This video shows it:
 
 [video](https://youtu.be/rWNDIeCRfUM)
 
-\
-\
+
 
 The current‑source circuit consists of an LM317 IC and a resistor. When you add the LM317 you’ll see many variants. Choose the one with TO‑252 in the name; this is an SMD package of a suitable size. For the resistor I found by trial and error that 470 Ω gives me a nice brightness. You could also choose, for example, a 300 Ω resistor together with an adjustable 300 Ω trimmer so you can set the brightness afterwards yourself. The trimmer must then be placed in series with the resistor.
 
@@ -175,6 +173,7 @@ The current‑source circuit consists of an LM317 IC and a resistor. When you ad
 The last thing to do in the schematic is draw the final lines. I connected the current source output to the LEDs with their resistors. I also added a label named led+. The advantage of a label is that we can see this name in the board layout as well.
 
 ![](makeYourOwnCustomLedStrip_html_6bea1ef4.png){#Image20 align="bottom" width="681" height="508" border="0"}
+
 
 **Note.** If you need more or fewer LEDs, you can easily select one such group and copy and paste it, or delete it with the DELETE key. For my coach I used a total of 18 LEDs. The complete schematic looks like this:
 
@@ -421,7 +420,5 @@ You’ve now created all the files your PCB fab needs. The only thing left is to
 
 ------------------------------------------------------------------------
 
-Maybe a bit of an anti‑climax, but I won’t explain this step here. I’ve already done that elsewhere. So I’ll refer you to [this page](https://train-science.com/printplaten-bestellen-bij-jlcpcb/) for ordering. Don’t worry, it’s a very simple process. For LED strips in trains I recommend either the blue or black solder mask. Bright colors can catch reflections.
-
-\
+I’ll refer you to [this page](https://github.com/Open-Source-Model-Railway-Electronics/docs/blob/master/Ordering_bare_PCB/Ordering_bare_PCB.md) for ordering. Don’t worry, it’s a very simple process. For LED strips in trains I recommend either the blue or black solder mask. Bright colors can catch reflections.
 
