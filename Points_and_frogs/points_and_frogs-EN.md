@@ -22,6 +22,14 @@ Usually one wants to control the turnout remotely. This can be done as easy as c
 
 ---
 
+
+## Crossings and slip switches
+
+Besides points there are also crossings and slip switches. There are these 3 types
+![Figure 1: labeled turnout diagram](crossing3.png)
+
+---
+
 ## Drives
 
 ### Double Coil Drive
@@ -201,3 +209,27 @@ The easiest way to add extra frog polarization to an electrofrog is again by usi
 Even for electrofrogs, some point motors can provide polarization via mechanical contacts. Servo brackets can also add switches for this purpose.
 
 ![Figure 13: Electrofrog schematic](plaatje_13.png)
+
+### Crossings and slip switches.
+
+Both crossings and slipswitches also exist in both insulated and polarized forms. When a simple crossing is polarized, typically 2 out of 4 frogs needs polarisation as is shown by this image. 
+![](crossing1.png)
+
+Using a frogjuicer is always right. But there are other ways. Usually, not always, it is known from where the train will be comming. It can be a computer program that simply knows when it sends a train over a crossing. Or when there is a point close by, you can make use of the point's operation to also handle the crossing. As is shown in this picture.
+
+The easy part is that one of the frogs can be tied directly to the frog of the point. The other crossing's frog however needs to be polarized in the opposite direction. This can be done by a relay that is controlled parallel with the point, but there ofcourse more than 1 way to achieve this.
+![](crossing2.png)
+
+In the event of a single or double slip switch. The situation does not really differ that much with a conventional crossing. And you can make use of the slip switch's drive to polarize the frog. 
+![](crossing4.png)
+
+Do bear in mind that the frog is linked to the switch blades of the opposite side. A common mistake is that the frog is connected to the wrong set of switch blades.
+
+
+---
+### Three way
+A three way points is more complicated because it has not two but three frogs. And there are thee different scenarios of polarisation. As shown by the image below.
+
+The first one is just shown as an insulated point. The other 3 images show how the frogs should be polarized according to the set direction. Note that the grey marked frogs are essentially not important.
+
+![](three_way.png)
